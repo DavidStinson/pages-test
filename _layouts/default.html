@@ -39,26 +39,40 @@
   <title>[tktk Module Name]</title>
 </head>
 <body>
-  <nav id="nav">
-    <button id="hamburger-button">
-      <svg 
-        width="36" 
-        height="36" 
-        xmlns="http://www.w3.org/2000/svg" 
-        fill="none" 
-        viewBox="0 0 18 14" 
-        class="mn-p-[0.325rem]"
+  <header class="header">
+    <nav class="nav">
+      <button 
+        class="hamburger-button"
+        aria-label="Open navigation"
+        aria-controls="sub-nav-lesson-panel"
+        aria-expanded="false"
       >
-        <path 
-          stroke="currentColor" 
-          stroke-linecap="round" 
-          stroke-linejoin="round" 
-          stroke-width="2" 
-          d="M1 13h7M1 1h16H1Zm0 6h16H1Z"
-        ></path>
-      </svg>
-    </button>
-  </nav>
+        <svg 
+          width="30"
+          height="30"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 18 14"
+        >
+          <path 
+            stroke="currentColor" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            stroke-width="2" 
+            d="M1 13h7M1 1h16H1Zm0 6h16H1Z"
+          ></path>
+        </svg>
+      </button>
+    </nav>
+    <nav class="sub-nav closed" id="sub-nav-lesson-panel">
+      <ul>
+        <li><a href="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/{{ site.github.repository_name }}">Test 1</a></li>
+        <li><a href="{{ site.github.pages_url }}">Test 2</a></li>
+        <li><a href="https://{{ site.github.pages_hostname }}/{{ site.github.repository_nwo }}">Test 3</a></li>
+        <li><a href="{{ site.github.baseurl }}">Test 4</a></li>
+      </ul>
+    </nav>
+  </header>
   <div class="container-lg px-3 my-5 markdown-body">{{ content }}</div>
 </body>
 </html>
