@@ -43,6 +43,7 @@
     <nav class="nav container-lg px-3">
       <button 
         class="hamburger-button"
+        id="sub-nav-lesson-panel-toggle"
         aria-label="Open navigation"
         aria-controls="sub-nav-lesson-panel"
         aria-expanded="false"
@@ -53,6 +54,7 @@
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 18 14"
+          class="nav-hamburger-icon visible"
         >
           <path 
             stroke="currentColor" 
@@ -62,9 +64,25 @@
             d="M1 13h7M1 1h16H1Zm0 6h16H1Z"
           ></path>
         </svg>
+        <svg 
+          width="30" 
+          height="30" 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="none" 
+          viewBox="0 0 18 14"
+          class="nav-close-icon"
+        >
+          <path 
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2" 
+            d="m1 1 12 12M1 13 13 1 1 13Z"
+          ></path>
+        </svg>
       </button>
     </nav>
-    <nav class="sub-nav closed container-lg px-3" id="sub-nav-lesson-panel">
+    <nav class="sub-nav container-lg px-3" id="sub-nav-lesson-panel">
       <ul>
         <li>
           <a href="{{ site.github.baseurl }}/tktk-microlesson1-dir">
@@ -84,6 +102,6 @@
       </ul>
     </nav>
   </header>
-  <div class="container-lg px-3 my-5 markdown-body">{{ content }}</div>
+  <div class="container-lg px-3 mt-4 mb-6 markdown-body">{{ content }}</div>
 </body>
 </html>
