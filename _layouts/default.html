@@ -40,7 +40,7 @@
 </head>
 <body>
   <header class="header">
-    <nav class="nav">
+    <nav class="nav container-lg px-3">
       <button 
         class="hamburger-button"
         aria-label="Open navigation"
@@ -64,12 +64,23 @@
         </svg>
       </button>
     </nav>
-    <nav class="sub-nav closed" id="sub-nav-lesson-panel">
+    <nav class="sub-nav closed container-lg px-3" id="sub-nav-lesson-panel">
       <ul>
-        <li><a href="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/{{ site.github.repository_name }}">Test 1</a></li>
-        <li><a href="{{ site.github.pages_url }}">Test 2</a></li>
-        <li><a href="https://{{ site.github.pages_hostname }}/{{ site.github.repository_nwo }}">Test 3</a></li>
-        <li><a href="{{ site.github.baseurl }}">Test 4</a></li>
+        <li>
+          <a href="{{ site.github.baseurl }}/tktk-microlesson1-dir">
+            tktk Microlesson 1 Title
+          </a>
+        </li>
+        <li>
+          <a href="{{ site.github.baseurl }}/tktk-microlesson2-dir">
+            tktk Microlesson 2 Title
+          </a>
+        </li>
+        <li>
+          <a href="{{ site.github.baseurl }}/tktk-microlesson3-dir">
+            tktk Microlesson 3 Title
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
