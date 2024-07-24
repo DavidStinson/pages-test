@@ -39,22 +39,22 @@
   <title>Test drive new site nav</title>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav container-lg px-3">
-      <button 
-        class="hamburger-button"
-        id="sub-nav-lesson-panel-toggle"
+  <header id="tc-header" class="header">
+    <nav id="tc-nav" class="container-lg px-3">
+      <button
+        id="tc-sub-nav-button"
         aria-label="Open navigation"
         aria-controls="sub-nav-lesson-panel"
         aria-expanded="false"
       >
         <svg 
+          id="tc-hamburger-icon" 
+          class="visible"
           width="30"
           height="30"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 18 14"
-          class="nav-hamburger-icon visible"
         >
           <path 
             stroke="currentColor" 
@@ -65,12 +65,12 @@
           ></path>
         </svg>
         <svg 
+          id="tc-close-icon"
           width="30" 
           height="30" 
           xmlns="http://www.w3.org/2000/svg" 
           fill="none" 
           viewBox="0 0 14 14"
-          class="nav-close-icon"
         >
           <path 
             stroke="currentColor"
@@ -82,23 +82,23 @@
         </svg>
       </button>
     </nav>
-    <div class="sub-nav-container">
-      <nav class="sub-nav container-lg px-3" id="sub-nav-lesson-panel">
+    <div id="tc-sub-nav-container" aria-hidden="true">
+      <nav id="tc-sub-nav" class="container-lg px-3">
         <h2 class="no-anchor">Lecture content</h2>
         <div class="nav-section">
           <ul>
             <li>
-              <a href="{{ site.github.baseurl }}/microlesson01">
+              <a href="{{ site.github.baseurl }}/microlesson-01">
                 tktk Microlesson 1 Title
               </a>
             </li>
             <li>
-              <a href="{{ site.github.baseurl }}/microlesson02">
+              <a href="{{ site.github.baseurl }}/microlesson-02">
                 tktk Microlesson 2 Title
               </a>
             </li>
             <li>
-              <a href="{{ site.github.baseurl }}/microlesson03">
+              <a href="{{ site.github.baseurl }}/microlesson-03">
                 tktk Microlesson 3 Title
               </a>
             </li>
@@ -106,12 +106,12 @@
         </div>
         <h2 class="no-anchor">Settings</h2>
         <div class="nav-section flex-row">
-          <button id="sticky-nav-toggle">Disable sticky nav</button>
-          <button id="dark-mode-toggle">Enable dark mode</button>
+          <button id="tc-sticky-nav-button">Disable sticky nav</button>
+          <button id="tc-dark-mode-button">Enable dark mode</button>
         </div>
       </nav>
     </div>
   </header>
-  <div class="container-lg px-3 mt-4 mb-6 markdown-body">{{ content }}</div>
+  <main class="container-lg px-3 mt-4 mb-6 markdown-body">{{ content }}</main>
 </body>
 </html>
